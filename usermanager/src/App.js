@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react'
+import AddUserForm from './components/AddUserForm'
+import DeleteUserForm from './components/DeleteUserForm'
+import SearchUser from './components/SearchUser'
 
-function App() {
+function App(){
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App' style={{'padding':'20px'}}>
+      <div className='AddUser'>
+        <AddUserForm />
+      </div>
+      <br/>
+      <div className='DeleteUser'>
+        <DeleteUserForm/>
+      </div>
+      <br/>
+      <div className='SearchUser'>
+        <SearchUser/>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
